@@ -70,7 +70,11 @@ void rotate_ideal(std::vector<int>& arr, const int k) {
  *
  * Delopgave 1:
  *
- *
+ * Topologisk sortering kan bruges for graf 2 da den er directed og har ingen cykler.
+ * Dijkstra kan brues til alle da ingen har negative vægte.
+ * Kruskal kan kun bruges til graf 3 da de andre har retninger.
+ * Prim kan ligeledes kun bruges til graf 3 da de andre har retninger.
+ * til graf 3 vil Kruskal være bedst da den er sparse.
  *
  * Delopgave 2:
 
