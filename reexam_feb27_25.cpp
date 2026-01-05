@@ -70,11 +70,34 @@ void rotate_ideal(std::vector<int>& arr, const int k) {
  *
  * Delopgave 1:
  *
- * Topologisk sortering kan bruges for graf 2 da den er directed og har ingen cykler.
- * Dijkstra kan brues til alle da ingen har negative vægte.
- * Kruskal kan kun bruges til graf 3 da de andre har retninger.
- * Prim kan ligeledes kun bruges til graf 3 da de andre har retninger.
- * til graf 3 vil Kruskal være bedst da den er sparse.
+ *
+ * Graf 1:
+ *  - Directed
+ *  - Weighted
+ *  - Weakly connected, da du ikke kan komme fra alle noder til node E
+ *  - Cyclic, da node A - C - B - A
+ *  - Sparse da den ikke er tæt på en perfekt graf hvor alle noder er forbundet med alle andre
+ *  - Algoritmer: Dijstra kan bruges da der er ingen negative vægte, topologisk kan ikke da der er cyclic opførelse.
+ *  -             Kruskal og Prim har begge brug for at grafen er undirected, derfor kan de ikke bruges.
+
+ * Graf 2:
+ *  - Directed
+ *  - Weighted
+ *  - Weakly connected, da du ikke kan komme fra alle noder til node E
+ *  - Ingen Cyclic
+ *  - Sparse da den ikke er tæt på en perfekt graf hvor alle noder er forbundet med alle andre
+ *  - Algoritmer: Dijstra kan bruges da der er ingen negative vægte, topologisk kan også bruges da der ikke er cyclic opførelse.
+ *  -             Kruskal og Prim har begge brug for at grafen er undirected, derfor kan de ikke bruges.
+ *
+ * Graf 3:
+ *  - Undirected
+ *  - Weighted
+ *  - Connected, da alle noder er forbundet.
+ *  - Cyclic, da den er Undirected
+ *  - Sparse da den ikke er tæt på en perfekt graf hvor alle noder er forbundet med alle andre
+ *  - Algoritmer: Dijstra kan bruges da der er ingen negative vægte, topologisk kan ikke bruges da den er undirected.
+ *  -             Kruskal og Prim kan bruges da de er undirected, Kruskal er bedst da den er sparse.
+ *
  *
  * Delopgave 2:
 
