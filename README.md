@@ -1,0 +1,2 @@
+# algoritmer
+Algoritmer og datastrukturer
